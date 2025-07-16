@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+
+    <script src="https://kit.fontawesome.com/f71dafa12d.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+   
+   
+    <div class="container min-vh-100 d-flex flex-column justify-content-center p-3" style="max-width: 40rem;" >
+         <div class="h1 text-center fw-bolder text-primary border rounded bg-black">CALCULATOR</div>
+       <div class="row-12 g-0 row-lg-12">
+           <div class="col lg-12 mb-1">
+                <input type="text" name="" id="display" class="border rounded mx-auto p-3 bg-light text-black text-end w-100"  disabled>
+           </div> 
+        </div>
+       
+            <div class="row g-0 text-center">
+                <div class="col-3 col-md-2 col-lg-3">
+                    <div class="card ">
+                       <button class="btn btn-primary text-center"
+                       onclick="clearValue()">
+                        C
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3">
+                     <div class="card">
+                        <button class="btn btn-primary text-center" onclick="appendValue('(')">
+                       (
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center" onclick="appendValue(')')">
+                        )
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('/')">
+                        <i class="fa-solid fa-divide"></i>
+                       </button>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="row g-0">
+                <div class="col-3 col-md-2 col-lg-3">
+                    <div class="card ">
+                       <button class="btn btn-primary text-center"
+                       onclick="appendValue('7')">
+                        7
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('8')">
+                        8
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('9')">
+                        9
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                         onclick="appendValue('*')">
+                         <i class="fa-solid fa-xmark"></i>
+                       </i>
+                        
+                       </button>
+                    </div>
+                </div>
+            </div>
+
+           <div class="row g-0">
+                <div class="col-3 col-md-2 col-lg-3">
+                    <div class="card ">
+                       <button class="btn btn-primary text-center"
+                       onclick="appendValue('4')">
+                        4
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('5')">
+                        5
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('6')"
+                        >
+                        6
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('-')">
+                        <i class="fa-solid fa-minus"></i>
+                       </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+              <div class="row g-0">
+                <div class="col-3 col-md-2 col-lg-3">
+                    <div class="card ">
+                       <button class="btn btn-primary text-center"
+                       onclick="appendValue('1')">
+                        1
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('2')">
+                        2
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('3')">
+                        3
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('+')">
+                        <i class="fa-solid fa-plus"></i>
+                       </button>
+                    </div>
+                </div>
+            </div>
+
+
+              <div class="row g-0">
+                <div class="col-3 col-md-2 col-lg-3">
+                    <div class="card ">
+                       <button class="btn btn-primary text-center"
+                       onclick="appendValue('0')">
+                        0
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="appendValue('.')">
+                        .
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="deleteValue()">
+                        <i class="fa-solid fa-delete-left"></i>
+                       </button>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-lg-3 ">
+                     <div class="card">
+                        <button class="btn btn-primary text-center"
+                        onclick="calcu()">
+
+                        <i class="fa-solid fa-equals"></i>
+                        
+                       </button>
+                    </div>
+                </div>
+            </div>
+      
+    </div>
+
+
+    <script>
+        let display = document.getElementById('display');
+
+        function clearValue(value){
+            display.value = " ";
+        }
+
+        function appendValue(value){
+            display.value = display.value + value;
+        }
+        function deleteValue(value){
+           display.value = display.value.slice(0, -1);
+        }
+
+        function calcu(){
+            try{display.value = eval(display.value);
+
+            }
+            catch(err){
+                display.value = "error"
+            }
+        }
+
+        document.addEventListener('keydown', function(event){
+            const key = event.key
+            
+            if(!isNaN(key) || ['+', '-', '/', '*', '.'].includes(key)){
+                appendValue(key);
+            }else if (key == 'Enter'){
+                event.preventDefault;
+                calcu()
+            }else if (key == 'Backspace' ){
+                 display.value = display.value.slice(0, -1);
+            }else if(key == 'Escape10'){
+                clearValue()
+            }
+
+        })
+
+    </script>
+
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
